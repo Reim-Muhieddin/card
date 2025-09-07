@@ -1,0 +1,109 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    text-shadow: 2px 2px rgb(186, 103, 189);
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(35, 2, 66);
+    display: grid;
+    place-items: center;
+}
+section{
+    width: 95%;
+    height: 95%;
+    background-color: rgb(209, 208, 207);
+    justify-content: space-evenly;
+    border: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.group{
+    width: 65%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.group .card{
+    width: 30%;
+    height: 100%;
+    background-color: linear-gradient(rgb(122, 122, 221));
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.group .card .content{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+.group .card .content::after{
+    width: 140%;
+    height: 0%;
+    top: 0px;
+    content: "";
+    position: absolute;
+    background-color: bisque;
+    border-radius: 40%;
+    transform: translateY(-40%);
+    z-index: -1;
+    transition: 0.5em;
+}
+.group .card .content:hover::after{
+height: 90%;
+}
+.group .card .content img{
+    display: block;
+    border-radius: 50%;
+    margin: 20px;
+    transition: 0.5s;
+}
+.group .card .footer{
+    width: 100%;
+    height: 10%;
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:  rgb(186, 103, 189);
+    transform: translateY(100%);
+    transition: all 0.4s;
+}
+.group .card:hover .footer{
+    transform: translateY(0%);
+}
+.group .card .footer i{
+    font-size: 25px;
+    display: inline-block;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.group .card .footer i:hover{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 6px;
+}
+.group .card:hover .content img{
+width: 200px;
+height: 200px;
+border: 7px solid white;
+outline: 5px solid blueviolet;
+filter: blur(0px);
+}
